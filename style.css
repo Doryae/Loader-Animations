@@ -7,7 +7,8 @@
     --ice-blue: #5DB9EE;
     --blue-white:#E6EEF3;
     --warm-red: #E74C3C;
-    --deep-cyan: #00D4D4;
+    --deep-turquoise: #149C90;
+    --light-cyan: #E0F7FA;
 }
 
 @font-face {
@@ -100,7 +101,7 @@ article:nth-child(2n+1) {
 
 /* Animated Spinner Loader */
 
-.circle {
+.circle{
     height: 50px;
     width: 50px;
     border: 5px solid var(--white);
@@ -153,6 +154,37 @@ article:nth-child(2n+1) {
     width: 75%;
     border: 3px solid var(--blue-white);
     border-right-color: var(--warm-red);
+    border-radius: 50%;
+    animation: rotationInversed .5s linear infinite;
+}
+
+.spinner-4 .circle {
+    opacity: 1;
+    border: 5px solid transparent;
+    border-right-color: var(--deep-turquoise);
+    border-left-color: var(--deep-turquoise);
+    animation: rotation 1s linear infinite;
+    position: relative;
+}
+
+.spinner-5 .circle {
+    opacity: 1;
+    border: 5px solid transparent;
+    border-right-color: var(--deep-turquoise);
+    border-left-color: var(--deep-turquoise);
+    animation: rotation 1s linear infinite;
+    position: relative;
+}
+
+.spinner-5 .circle::after {
+    content: "";
+    position: absolute;
+    inset: -1%;
+    height: 79%;
+    width: 79%;
+    border: 5px solid transparent;
+    border-right-color: var(--light-cyan);
+    border-left-color: var(--light-cyan);
     border-radius: 50%;
     animation: rotationInversed .5s linear infinite;
 }
